@@ -1,0 +1,12 @@
+<div class="row mb-2">
+    <div class="col-12">
+        <button class="btn btn-success">Nova Marmita</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12"> 
+         @for (packageElement of packages; track $index){   
+        <app-package-item [package]="packageElement" ></app-package-item> 
+        }
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<!-- Imagem-->
+<div class="row">
+    <div class="col-12">
+        <img [src]="packageSelected.imagePath" alt={{packageSelected.name}} class="img-responsive"
+            style="max-height: 300px" />
+    </div>
+</div>
+
+<!-- Nome da Marmita-->
+
+<div class="row">
+    <div class="col-12">
+        <h1>{{packageSelected.name}}</h1>
+    </div>
+</div>
+<!-- menu opções-->
+<div class="row">
+    <div class="col-12">
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" appDropdown>
+                Opções <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a (click)="addToFoodList()">Adicionar ingrediente a Marmita</a></li>
+                <li><a>Editar Marmita</a></li>
+                <li><a>Remover Marmita</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- descrição-->
+
+<div class="row">
+    <div class="col-12">
+        {{packageSelected.description}}
+    </div>
+</div>
+
+<!-- Ingredientes-->
+<div class="row">
+    <div class="col-12">
+        <ul class="list-group">
+            @for (ingrediente of packageSelected.ingredientes; track $index){
+            <li class="list-group-item">
+                {{ingrediente.name}} ({{ingrediente.amount}})
+            </li>
+            }
+        </ul>
+    </div>
+</div>

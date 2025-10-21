@@ -1,0 +1,16 @@
+ 
+        <a class="list-group-item clearfix" (click)="onSelected()" style="cursor:pointer">
+            <div class="float-start">
+                <h4 class="list-group-item-heading">{{package.name}}</h4>
+                <p class="list-group-item-text">{{package.description}}</p>
+            </div>
+            <div class="float-end">
+                <img 
+                [src]="package.imagePath" 
+                alt="{{package.name}}" 
+                class="img-responsive" 
+                style="max-height: 50px">
+            </div>
+        </a>
+      
+   

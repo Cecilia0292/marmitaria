@@ -1,0 +1,11 @@
+/* src/styles.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.dropdown-toggle.show +ul.dropdown-menu{
+    display: block;
+    position: absolute;
+    transform: translate(0px, 38px, 0px);
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+}
