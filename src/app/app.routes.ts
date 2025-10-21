@@ -13,11 +13,14 @@ import { PackagesDefaultComponent } from './packages/packages-default/packages-d
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/marmitas', pathMatch: 'full'},
-    { path: 'marmitas', component: PackagesComponent, children: [
-        {path: '', component: PackagesDefaultComponent},
-        {path: ':id', component: PackageDetailsComponent}
-    ]},
-    { path: 'alimentos',component: FoodListComponent},
-
+    { path: '', redirectTo: 'marmitas', pathMatch: 'full' },
+    {
+        path: 'marmitas', component: PackagesComponent, children: [
+            { path: '', component: PackagesDefaultComponent },
+            { path: ':id', component: PackageDetailsComponent }
+        ]
+    },
+    { path: 'alimentos', component: FoodListComponent },
+    { path: 'alimentos/editar/:id', component: FoodEditComponent },
+    { path: '**', redirectTo: 'marmitas' }
 ];
