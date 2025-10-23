@@ -21,6 +21,4 @@ export const routes: Routes = [
         ]
     },
     { path: 'alimentos', component: FoodListComponent },
-    { path: 'alimentos/editar/:id', component: FoodEditComponent },
-    { path: '**', redirectTo: 'marmitas' }
 ];

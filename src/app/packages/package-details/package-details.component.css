@@ -1,11 +1,7 @@
-.dropdown-menu >li >a {
-    cursor: pointer;
-    color: #0d6efd;
-    text-decoration: underline;
-    margin: 10px;
+.dropdown-menu {
+    display: none;
 }
-.dropdown-menu >li >a:hover {
-    cursor: pointer;
-    color: #0b4fb5;
-    text-decoration: underline;
+
+.show .dropdown-menu {
+    display: block;
 }

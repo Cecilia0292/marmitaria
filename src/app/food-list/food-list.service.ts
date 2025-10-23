@@ -19,4 +19,8 @@ export class FoodListService {
         this.foodList.push(...ingredients);
         this.foodChanged.emit(this.foodList.slice());
     }
+    clearFoods() {
+        this.foodList = [];
+        this.foodChanged.emit(this.foodList.slice());
+    }
 }

@@ -22,4 +22,7 @@ export class FoodEditComponent {
       this.foodListService.addFood(newFood);
      
     }
+    limparfood() {
+      this.foodListService.clearFoods();
+    }
 }
